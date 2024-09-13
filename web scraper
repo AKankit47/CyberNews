@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import sqlite3
 
 # URL of the website you want to scrape
-url = 'https://www.ibm.com/blog/category/cybersecurity/'
+url = 'https://example.com' # Enter the website url you want to scrap the news from
 # Send an HTTP GET request to the URL
 response = requests.get(url)
 
@@ -13,7 +13,7 @@ if response.status_code == 200:
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # Find all elements with the class name you're interested in
-    elements = soup.find_all(class_='container grid')
+    elements = soup.find_all(class_='Class_Name') # Enter the class in which the news are written
     # Connect to SQLite database
     conn = sqlite3.connect('scraped_data.db')
     cursor = conn.cursor()
