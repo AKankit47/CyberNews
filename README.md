@@ -24,7 +24,7 @@ Clone the Repository
 
 bash
 Copy code
-git clone https://github.com/AKankit47/live-news-aggregator.git
+git clone https://github.com/AKankit47/CyberNews.git
 cd live-news-aggregator
 
 Install Dependencies
