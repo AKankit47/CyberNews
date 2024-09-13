@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import sqlite3
 
 # URL of the website you want to scrape
-url = 'https://example.com' # Enter the website url you want to scrap the news from
+url = 'https://example.com' 
 # Send an HTTP GET request to the URL
 response = requests.get(url)
 
