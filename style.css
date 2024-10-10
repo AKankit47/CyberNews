@@ -1,1 +1,57 @@
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #34495e;
+    color: white;
+  }
+  /* Style for navigation menu */
+  .nav {
+    font-family: Arial, sans-serif;
+    color: white;
 
+    &:active{
+      color: black;
+    }
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+    position: relative;
+  }
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .signup {
+  background-color: #a34cf2;
+  color: #fff;
+  margin-right: 10px;
+  
+  }
+  
+  .login {
+  color: #000;
+  margin-right:8px;
+  
+  
+  }
+  .right-menu { 
+    padding: 15px;
+    margin-right: 25px;
+
+  }
+
+  .right-menu:hover{
+    color:#002f6c;
+  }
