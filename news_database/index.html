@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .article {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        h2 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cyber News</h1>
+    <div id="news-container"></div>
+
+    <script>
+        async function fetchNews() {
+            try {
+                const response = await fetch('/api/news'); // Call the API endpoint
+                const newsArticles = await response.json();
+
+                const newsContainer = document.getElementById('news-container');
+                newsContainer.innerHTML = '';
+
+                newsArticles.forEach(article => {
+                    const articleDiv = document.createElement('div');
+                    articleDiv.className = 'article';
+                    articleDiv.innerHTML = `
+                        <h2>${article.title}</h2>
+                        <p><strong>Author:</strong> ${article.author}</p>
+                        <p><strong>Source:</strong> ${article.source}</p>
+                        <p>${article.description}</p>
+                        <p><em>Published At: ${new Date(article.publishedAt).toLocaleString()}</em></p>
+                    `;
+                    newsContainer.appendChild(articleDiv);
+                });
+            } catch (error) {
+                console.error('Error fetching news:', error);
+            }
+        }
+
+        fetchNews(); // Call the function to fetch news articles
+    </script>
+</body>
+</html>
