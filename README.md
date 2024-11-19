@@ -113,6 +113,6 @@ PRAW: For accessing the Reddit API.
 Contact
 For any questions or feedback, please contact:
 
-Your Name - ankitkumarbhambhoo@gmail.com
+ Name - ankitkumarbhambhoo@gmail.com
 
 GitHub Profile - https://github.com/AKankit47
